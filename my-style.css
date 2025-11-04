@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFF;
+    overflow-x: hidden;
+    background-color: #1A1A1A;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+img {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+p:empty {
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+:root {
+    --white: #fff;
+    --light-black: #141414;
+    --yellow: #FFD11A;
+    --grey: #98989A;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.block-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-oneThird {
+    width: 33.33%;
+}
+
+.block-half {
+    width: 50%;
+}
+
+a,
+p {
+    color: var(--grey);
+}
+
+a:hover {
+    color: var(--white);
+}
+
+.btn {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    padding: 15px 20px;
+    background-color: var(--yellow);
+    color: var(--light-black);
+    border-radius: 15px;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+/* Header Css */
+.header-wrapper .logo-wrapper {
+    padding: 26.5px 0;
+}
+
+.header-wrapper .block-box {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-wrapper ul {
+    text-align: center;
+}
+
+.nav-wrapper ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.nav-wrapper ul li:first-child {
+    padding-left: 0;
+}
+
+.nav-wrapper ul li:last-child {
+    padding-right: 0;
+}
+
+.nav-wrapper ul li a {
+    color: #fff;
+}
+
+.header-wrapper .header-right {
+    text-align: right;
+}
+
+.hide-desktop-show-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .d-laptop-none {
+        display: none;
+    }
+
+    .d-laptop-block {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .block-oneThird {
+        width: 50%;
+    }
+
+    .d-tab-none {
+        display: none;
+    }
+
+    .d-tab-block {
+        display: block;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Header Css */
+    .mobile .toggle-menu span {
+        width: 20px;
+        height: 3px;
+        display: block;
+        background-color: var(--white);
+        transition: 0.3s ease;
+    }
+
+    .mobile .toggle-menu span.two {
+        margin: 3px 0;
+    }
+
+    .mobile .toggle-menu.active span.one {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile .toggle-menu.active span.two {
+        width: 0;
+        opacity: 0;
+    }
+
+    .mobile .toggle-menu.active span.three {
+        transform: rotate(-45deg) translate(3px, -3.5px);
+    }
+
+    .mobile .header-left {
+        width: 50%;
+    }
+
+    .mobile .header-right {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mobile .mobile-wrapper {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        transform: translateX(100%);
+        transition: all ease 1s;
+        background-color: var(--light-black);
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile .mobile-wrapper.menu-open {
+        transform: translateX(0%);
+    }
+
+    .mobile .nav-wrapper ul li {
+        text-align: left;
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    .mobile .nav-wrapper ul li:first-child {
+        padding-left: 15px;
+    }
+
+    .mobile .nav-wrapper ul li:last-child {
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .block-oneThird {
+        width: 100%;
+    }
+
+    .block-half {
+        width: 100%;
+    }
+
+    .d-mobile-none {
+        display: none;
+    }
+
+    .d-mobile-block {
+        display: block;
+    }
+}

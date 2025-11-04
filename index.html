@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="./css/my-style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <div class="header-wrapper">
+        <div class="container">
+            <div class="desktop d-tab-none">
+                <div class="block-box">
+                    <div class="header-left block-oneThird">
+                        <div class="logo-wrapper">
+                            <a href="#"><img src="./img/logo.png" alt=""></a>
+                            <p>desktop</p>
+                        </div>
+                    </div>
+                    <div class="header-center block-oneThird">
+                        <div class="nav-wrapper">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Podcasts</a></li>
+                                    <li><a href="#">Resources</a></li>   
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="header-right block-oneThird">
+                        <div class="button-box">
+                                <a href="#" class="btn btn-yellow">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile d-none d-tab-block">
+                <div class="block-box">
+                    <div class="header-left">
+                        <div class="logo-wrapper">
+                            <a href="#"><img src="./img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="mobile-wrapper">
+                            <div class="nav-wrapper">
+                                <nav>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Podcasts</a></li>
+                                        <li><a href="#">Resources</a></li>   
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="button-box">
+                                <a href="#" class="btn btn-yellow">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="toggle-menu">
+                            <span class="one"></span>
+                            <span class="two"></span>
+                            <span class="three"></span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    console.log("it work");
+    $('.toggle-menu').click(function(){
+        console.log("it work");
+        $(this).toggleClass('active');
+        $('body').toggleClass('active');
+        $('.header-right').toggleClass('menu-open');
+        $('.mobile-wrapper').toggleClass('menu-open');
+    });
+});
+
+</script>
+</html>
